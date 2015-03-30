@@ -15,7 +15,7 @@
     <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -27,53 +27,94 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Custom style -->
-    <style type="text/css">
-      #map_canvas {
-        height: 200px;
-      }
-
-      .jumbotron {
-        background-color: aliceblue;
-        margin-bottom: 30px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-    </style>
   </head>
 
-  <body>
+  <body class="home-page">
 
     <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item active" href="#">Home</a>
+          <a class="blog-nav-item active" href="#">Hjem</a>
           <a class="blog-nav-item" href="#">Events</a>
-          <a class="blog-nav-item" href="#">Contact</a>
-          <a class="blog-nav-item" href="#">About</a>
+          <a class="blog-nav-item" href="#">Kontakt</a>
+          <a class="blog-nav-item" href="#">Om oss</a>
         </nav>
       </div>
     </div>
 
     <div class="container">
-
       <div class="jumbotron">
-        <img src="./img/psn-logo.png" class="img-responsive center-block">
+        <img src="./img/psn-logo.png" class="img-responsive center-block" />
       </div>
 
       <div class="row">
-        <div class="col-sm-7 blog-main">
-
-          <div class="blog-post">
-            
+        <div class="col-lg-8">
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="./img/khedan-fauja-singh.jpg" alt="Generic placeholder image" width="200px" height="200px">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Fauja Singh besøker Panjabi Skole Norge</h4>
+              <p>Teaser tekst om fauja singh. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+              Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="" href="#">Les mer »</a></p>
+            </div>
           </div>
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="./img/happy-himmat.jpg" alt="Generic placeholder image" width="200px" height="200px">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Happy Himmat sprer glede!!</h4>
+              <p>Teaser tekst om happy himmat. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+              Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="" href="#">Les mer »</a></p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="./img/happy-family.jpg" alt="Generic placeholder image" width="200px" height="200px">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">1 for alle, alle for 1!</h4>
+              <p>Teaser tekst om happy family. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+              Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="" href="#">Les mer »</a></p>
+            </div>
+          </div>
+        </div>
 
-        </div><!-- /.blog-main -->
-
-        <div class="col-sm-4 col-sm-offset-1 blog-sidebar">
+        <div class="col-sm-3 blog-sidebar">
+          <div id="events" class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title text-highlight">
+                  <span class="line">Events</span>
+                </h3>
+              </div>
+            <div class="panel-body">
+              <div class="event-item">
+                <p class="date-label">
+                  <span class="month">APR</span>
+                  <span class="date-number">13</span>
+                </p>
+                <div class="details">
+                  <h2 class="title">Vaisakhi</h2>
+                  <p class="time"><i class="fa fa-clock-o"></i>10:00am - 18:00pm</p>
+                  <p class="location"><i class="fa fa-map-marker"></i>PSN Lokaler</p>                            
+                </div><!--//details-->
+              </div><!--event-item-->  
+              <a class="read-more" href="events.html">All events<i class="fa fa-chevron-right"></i></a>  
+            </div>
+          </div>
           <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">Kontaktinfo</h3>
+                <h3 class="panel-title">Hver fredag fra 18-20</h3>
               </div>
               <div class="panel-body">
                 <address>
@@ -90,10 +131,7 @@
             </div>
             <div class="panel-body">
               <div>
-                <img src="img/word-icon4848.png" /> Innmeldingsskjema
-              </div>
-              <div>
-                <img src="img/PDF-icon4848.png" /> Innmeldingsskjema
+                Innmeldingsskjema <img src="img/word-icon4848.png" /> / <img src="img/PDF-icon4848.png" />
               </div>
             </div>
           </div>
