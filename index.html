@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Panjabi Skole Norge">
+    <meta name="author" content="Rana Ranjit Singh">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Panjabi Skole Norge</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./bootstrap/docs/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom style -->
+    <style type="text/css">
+      #map_canvas {
+        height: 200px;
+      }
+
+      .jumbotron {
+        background-color: aliceblue;
+        margin-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="#">Home</a>
+          <a class="blog-nav-item" href="#">Events</a>
+          <a class="blog-nav-item" href="#">Contact</a>
+          <a class="blog-nav-item" href="#">About</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <img src="./img/psn-logo.png" class="img-responsive center-block">
+      </div>
+
+      <div class="row">
+        <div class="col-sm-7 blog-main">
+
+          <div class="blog-post">
+            
+          </div>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-4 col-sm-offset-1 blog-sidebar">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Kontaktinfo</h3>
+              </div>
+              <div class="panel-body">
+                <address>
+                  <strong>Panjabi Skole Norge</strong><br>
+                  Veitvet skole<br>
+                  Veitvetveien 17, 0596 Oslo<br>
+                </address>
+              <div id="map_canvas"></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Dokumenter</h3>
+            </div>
+            <div class="panel-body">
+              <div>
+                <img src="img/word-icon4848.png" /> Innmeldingsskjema
+              </div>
+              <div>
+                <img src="img/PDF-icon4848.png" /> Innmeldingsskjema
+              </div>
+            </div>
+          </div>
+        </div><!--/span-->
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Panjabi Skole Norge Homepage</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    function initialize() {
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var map_canvas = document.getElementById('map_canvas');
+        var map_options = {
+            center: new google.maps.LatLng(59.942013, 10.849824),
+            zoom: 14,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(map_canvas, map_options);
+
+        var image = 'img/khalsa-flag-pin.GIF';
+        var myLatLng = new google.maps.LatLng(59.942013, 10.849824);
+        var beachMarker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            icon: iconBase + 'schools_maps.png'
+        });
+
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  </body>
+</html>
