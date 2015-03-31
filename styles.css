@@ -19,17 +19,42 @@ h6, .h6 {
   color: #333;
 }
 
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
 
-/*
- * Override Bootstrap's default container.
- */
-
-@media (min-width: 1200px) {
-  .container {
-    width: 970px;
+@media (max-width: 767px) { 
+  .media img {
+    width: 700px;
   }
 }
 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+  .media img {
+    width: 700px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .media img {
+    width: 800px;
+  }  
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  /*
+ * Override Bootstrap's default container.
+ */
+  .container {
+    width: 970px;
+  } 
+
+  .media img {
+    width: 1000px;
+  }
+}
 
 /*
  * Masthead for nav
@@ -71,6 +96,14 @@ h6, .h6 {
   border-right: 5px solid transparent;
   border-bottom: 5px solid;
   border-left: 5px solid transparent;
+}
+
+.media { 
+  margin-bottom: 30px;
+}
+
+.media-body {
+    width: inherit;
 }
 
 /*
