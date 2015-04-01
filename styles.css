@@ -98,6 +98,20 @@ h6, .h6 {
   border-left: 5px solid transparent;
 }
 
+/*
+ * Page header
+ *
+*/
+.page-heading {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.page-heading h1.heading-title {
+  margin-top: 0;
+  display: inline-block;
+  font-size: 28px;
+}
+
 .media { 
   margin-bottom: 30px;
 }
@@ -199,6 +213,9 @@ h6, .h6 {
 #events .details p {
   color: #666;
   font-size: 13px;
+}
+#events .details .time {
+  margin-right: 10px;
 }
 
 .date-label {
